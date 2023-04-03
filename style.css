@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* Basic Bootstrap CSS
+modified to make sense 
+by Ms. St Don */
+/* Default Variables 
+You can change these colors to what you want
+And use in CSS using the var() value.
+*/
+:root {
+  --bs-primary: #6f7276;
+  --bs-primary-hover: #7c7f83;
+  --bs-secondary: #2a2828;
+  --bs-secondary-hover: #1a1919;
+  --bs-light: #f8f9fa;
+  --bs-body-bg: #212121;
+  --bs-text-color: #808793;
+  --bs-link-color: #11438d;
+
+  
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #b5303e;
+  --bs-dangerdark: #912731;
+  --bs-dark: #212529;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-rgb: 33, 37, 41;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+}
+/* Layout CSS 
+such as your body, main,
+header, nav, etc. */
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+/* Text Formatting
+such as your a, headings,
+paragraphs, etc. */
+p, ul, strong{
+  font-size: var(--bs-body-font-size);
+  color: var(--bs-text-color);
+}
+/* Break Points */
+.hidden{
+  display:none;
+}
+  /* x small */
+@media only screen and (max-width: 575.98px) { 
+
+  @keyframes blinkingText{
+    0%{ color:sandybrown; }
+    49%{ color:yellow; }
+    60%{ color:hotpink; }
+    99%{ color:crimson; }
+    100%{ color:darkred; }
+  }
+  
+  .hidden{
+    display:block;
+  }
+  
+  h1, h2, h3, h4, h5, p, a{
+    animation:blinkingText 0.25s infinite;
+  }
+}
+/* small */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  @keyframes blinkingText{
+    0%{ color:sandybrown; }
+    49%{ color:yellow; }
+    60%{ color:hotpink; }
+    99%{ color:crimson; }
+    100%{ color:darkred; }
+  }
+  
+  h1, h2, h3, h4, h5, p, a{
+    animation:blinkingText 0.25s infinite;
+  }
+}
+/* medium */
+@media (min-width: 568px) and (max-width: 991.98px) { 
+  
+}
+/* large */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
+}
+/* xl */
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+  
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-style: italic;
+  color: var(--bs-primary);
+}
+
+a{
+  color: var(--bs-link-color);
+}
+
+html{
+  background-color: var(--bs-body-bg);
+}
+
+nav{
+  background-color: var(--bs-secondary);
+}
+
+.nav-link, .dropdown-item{
+  color: var(--bs-primary)
+}
+
+.dropdown-menu{
+  background-color: var(--bs-secondary);
+}
+
+.nav-link:hover{
+  color: var(--bs-primary-hover);
+}
+
+.dropdown-item:hover{
+  background-color: var(--bs-secondary-hover);
+  color: var(--bs-primary-hover);
+}
+
+button{
+  border-color: var(--bs-danger);
+  background-color: var(--bs-body-bg);
+  padding:0.5%;
+  padding-left:1.5%;
+  padding-right:1.5%;
+  color: var(--bs-danger);
+  border-radius: 6px;
+}
+
+button:hover{
+  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--bs-danger);
+  color: var(--bs-secondary);
+}
+img{
+  width:280px;
+  height:260px;
+}
+
+.spinner-border{
+  margin-right:20%;
+}
